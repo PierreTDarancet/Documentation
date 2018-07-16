@@ -233,10 +233,45 @@ All I did here is add the keyword "something" underneath the Contents.
 
 All I did here was modify the "BUILDDIR" variable. The rest is identical to the generated Makefile.
 
-8. Now run:
+
+8. Commit your changes. Add all of your files to git and push your changes.
 
 .. code-block:: bash
 
+    $ cd ..
+    $ git add --all
+    $ git commit -m "pushing up docs changes."
+    $ git push origin master
+
+9. Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.
+
+.. code-block:: bash
+
+    $ cd ..
+    $ git clone <repo> docs-build
+    $ cd docs-build
+    $ git branch gh-pages
+    $ git checkout gh-pages
+    $ rm -rf *
+
+10. Now run:
+
+.. code-block:: bash
+
+    $ cd ../<reponame>/docs
     $ make html
 
-build the website which will contain all of the documentation. 
+this builds the website which will contain all of the documentation. 
+
+11. Go back to the directory where your docs were built and type:
+
+.. code-block:: bash
+
+    $ cd ../../docs-build
+    $ git add --all
+    $ git commit -m "pushing up documentation"
+    $ git push origin gh-pages
+
+Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.
+
+12. Done.
