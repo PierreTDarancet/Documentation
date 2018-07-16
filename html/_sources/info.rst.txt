@@ -240,3 +240,17 @@ All I did here was modify the "BUILDDIR" variable. The rest is identical to the 
     $ make html
 
 build the website which will contain all of the documentation. 
+
+9. Commit your changes. Add all of your files to git and push your changes.
+
+.. code-block:: bash
+
+    $ git add --all
+    $ git commit -m "pushing up docs changes."
+    $ git push origin master
+
+10. Go to your newly generated docs folder:
+
+.. code-block:: bash
+
+    $ cd ../../docs-build
