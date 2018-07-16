@@ -266,26 +266,46 @@ help:
 </div>
 <p>All I did here was modify the “BUILDDIR” variable. The rest is identical to the generated Makefile.</p>
 <ol class="arabic simple" start="8">
-<li>Now run:</li>
-</ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ make html
-</pre></div>
-</div>
-<p>build the website which will contain all of the documentation.</p>
-<ol class="arabic simple" start="9">
 <li>Commit your changes. Add all of your files to git and push your changes.</li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ git add --all
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
+$ git add --all
 $ git commit -m <span class="s2">&quot;pushing up docs changes.&quot;</span>
 $ git push origin master
 </pre></div>
 </div>
-<ol class="arabic simple" start="10">
-<li>Go to your newly generated docs folder:</li>
+<ol class="arabic simple" start="9">
+<li>Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.</li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../../docs-build
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
+$ git clone &lt;repo&gt; docs-build
+$ <span class="nb">cd</span> docs-build
+$ git branch gh-pages
+$ git checkout gh-pages
+$ rm -rf *
 </pre></div>
 </div>
+<ol class="arabic simple" start="10">
+<li>Now run:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../&lt;reponame&gt;/docs
+$ make html
+</pre></div>
+</div>
+<p>this builds the website which will contain all of the documentation.</p>
+<ol class="arabic simple" start="11">
+<li>Go back to the directory where your docs were built and type:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../../docs-build
+$ git add --all
+$ git commit -m <span class="s2">&quot;pushing up documentation&quot;</span>
+$ git push origin gh-pages
+</pre></div>
+</div>
+<p>Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.</p>
+<ol class="arabic simple" start="12">
+<li>Done.</li>
+</ol>
 </div>
 
 
