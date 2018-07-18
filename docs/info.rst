@@ -1,4 +1,4 @@
-How did I do that?
+How do we get started?
 **************************
 
 .. _Anaconda: https://www.anaconda.com/download
@@ -248,8 +248,8 @@ All I did here was modify the "BUILDDIR" variable. The rest is identical to the 
 .. code-block:: bash
 
     $ cd ..
-    $ git clone <repo> docs-build
-    $ cd docs-build
+    $ git clone <repo> docs-build/html
+    $ cd docs-build/html
     $ git branch gh-pages
     $ git checkout gh-pages
     $ rm -rf *
@@ -274,4 +274,4 @@ this builds the website which will contain all of the documentation.
 
 Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.
 
-12. Done.
+12. Now you must go to the Github settings and make sure that the documentation link is set up to look at gh-pages. The owner of the repo should have access to this.
