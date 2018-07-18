@@ -200,7 +200,7 @@ where &quot;builder&quot; is one of the supported builders, e.g. html, latex or 
         <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="7">
 <li>Now we would like to create documentation from the docstrings that we have entered here. What we’re going to do is now look at our directory tree. Our files should be in a folder, which is called the package name. In this case it is something. Along with this, there must be a file called “__init__.py”. Make sure you type:</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ touch ../src/__init__.py
@@ -239,7 +239,7 @@ contain the root <span class="nv">`toctree`</span> directive.
 </pre></div>
 </div>
 <p>All I did here is add the keyword “something” underneath the Contents.</p>
-<ol class="arabic simple" start="7">
+<ol class="arabic simple" start="8">
 <li>We now want to modify our Makefile as such:</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Minimal makefile for Sphinx documentation</span>
@@ -265,7 +265,7 @@ help:
 </pre></div>
 </div>
 <p>All I did here was modify the “BUILDDIR” variable. The rest is identical to the generated Makefile.</p>
-<ol class="arabic simple" start="8">
+<ol class="arabic simple" start="9">
 <li>Commit your changes. Add all of your files to git and push your changes.</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
@@ -274,7 +274,7 @@ $ git commit -m <span class="s2">&quot;pushing up docs changes.&quot;</span>
 $ git push origin master
 </pre></div>
 </div>
-<ol class="arabic simple" start="9">
+<ol class="arabic simple" start="10">
 <li>Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
@@ -285,7 +285,7 @@ $ git checkout gh-pages
 $ rm -rf *
 </pre></div>
 </div>
-<ol class="arabic simple" start="10">
+<ol class="arabic simple" start="11">
 <li>Now run:</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../&lt;reponame&gt;/docs
@@ -293,7 +293,7 @@ $ make html
 </pre></div>
 </div>
 <p>this builds the website which will contain all of the documentation.</p>
-<ol class="arabic simple" start="11">
+<ol class="arabic simple" start="12">
 <li>Go back to the directory where your docs were built and type:</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../../docs-build
@@ -303,7 +303,7 @@ $ git push origin gh-pages
 </pre></div>
 </div>
 <p>Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.</p>
-<ol class="arabic simple" start="12">
+<ol class="arabic simple" start="13">
 <li>Now you must go to the Github settings and make sure that the documentation link is set up to look at gh-pages. The owner of the repo should have access to this.</li>
 </ol>
 </div>
