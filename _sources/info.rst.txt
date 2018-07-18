@@ -267,7 +267,7 @@ this builds the website which will contain all of the documentation.
 
 .. code-block:: bash
 
-    $ cd ../../docs-build
+    $ cd ../../docs-build/html
     $ git add --all
     $ git commit -m "pushing up documentation"
     $ git push origin gh-pages
