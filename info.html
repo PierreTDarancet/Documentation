@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>How did I do that? &#8212; Documentation 0.0.1 documentation</title>
+    <title>How do we get started? &#8212; Documentation 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Something class" href="something.html" />
+    <link rel="next" title="An example: Something class" href="something.html" />
     <link rel="prev" title="Welcome to Documentation’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,8 +41,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="how-did-i-do-that">
-<h1>How did I do that?<a class="headerlink" href="#how-did-i-do-that" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="how-do-we-get-started">
+<h1>How do we get started?<a class="headerlink" href="#how-do-we-get-started" title="Permalink to this headline">¶</a></h1>
 <p>Here, we will explain how to set up Sphinx for a code written in Python. Here are the steps:</p>
 <ol class="arabic">
 <li><p class="first">Go to <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a>, and select the Python version for you.</p>
@@ -278,8 +278,8 @@ $ git push origin master
 <li>Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.</li>
 </ol>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
-$ git clone &lt;repo&gt; docs-build
-$ <span class="nb">cd</span> docs-build
+$ git clone &lt;repo&gt; docs-build/html
+$ <span class="nb">cd</span> docs-build/html
 $ git branch gh-pages
 $ git checkout gh-pages
 $ rm -rf *
@@ -304,7 +304,7 @@ $ git push origin gh-pages
 </div>
 <p>Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.</p>
 <ol class="arabic simple" start="12">
-<li>Done.</li>
+<li>Now you must go to the Github settings and make sure that the documentation link is set up to look at gh-pages. The owner of the repo should have access to this.</li>
 </ol>
 </div>
 
@@ -318,7 +318,7 @@ $ git push origin gh-pages
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to Documentation’s documentation!</a></li>
-      <li>Next: <a href="something.html" title="next chapter">Something class</a></li>
+      <li>Next: <a href="something.html" title="next chapter">An example: Something class</a></li>
   </ul></li>
 </ul>
 </div>

@@ -7,6 +7,9 @@
 Welcome to Documentation's documentation!
 =========================================
 
+   Here, I will go over how to set up Sphinx documentation for a Python package. I've tried to do it in a way that is simple to manage, and easy to set up.
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
