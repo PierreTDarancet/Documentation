@@ -162,7 +162,7 @@ Also, add `numpydoc` like so:
 
             return open(self.file_name, 'r')
 
-6. Now we would like to create documentation from the docstrings that we have entered here. What we're going to do is now look at our directory tree. Our files should be in a folder, which is called the package name. In this case it is something. Along with this, there must be a file called "__init__.py". Make sure you type:
+7. Now we would like to create documentation from the docstrings that we have entered here. What we're going to do is now look at our directory tree. Our files should be in a folder, which is called the package name. In this case it is something. Along with this, there must be a file called "__init__.py". Make sure you type:
 
 .. code-block:: bash
 
@@ -206,7 +206,7 @@ This is including the file "something.py" and saying we want to document the cla
 
 All I did here is add the keyword "something" underneath the Contents.
 
-7. We now want to modify our Makefile as such:
+8. We now want to modify our Makefile as such:
 
 .. code-block:: bash
 
@@ -234,7 +234,7 @@ All I did here is add the keyword "something" underneath the Contents.
 All I did here was modify the "BUILDDIR" variable. The rest is identical to the generated Makefile.
 
 
-8. Commit your changes. Add all of your files to git and push your changes.
+9. Commit your changes. Add all of your files to git and push your changes.
 
 .. code-block:: bash
 
@@ -243,7 +243,7 @@ All I did here was modify the "BUILDDIR" variable. The rest is identical to the 
     $ git commit -m "pushing up docs changes."
     $ git push origin master
 
-9. Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.
+10. Change your directory, reclone the repo, make a new branch, checkout that branch and remove the contents.
 
 .. code-block:: bash
 
@@ -254,7 +254,7 @@ All I did here was modify the "BUILDDIR" variable. The rest is identical to the 
     $ git checkout gh-pages
     $ rm -rf *
 
-10. Now run:
+11. Now run:
 
 .. code-block:: bash
 
@@ -263,7 +263,7 @@ All I did here was modify the "BUILDDIR" variable. The rest is identical to the 
 
 this builds the website which will contain all of the documentation. 
 
-11. Go back to the directory where your docs were built and type:
+12. Go back to the directory where your docs were built and type:
 
 .. code-block:: bash
 
@@ -274,4 +274,4 @@ this builds the website which will contain all of the documentation.
 
 Now all of your docs have been pushed up to git. Everytime you change your code, you must recompile your docs and push them up to git. Once you do that Github will automatically refresh the webpage for you.
 
-12. Now you must go to the Github settings and make sure that the documentation link is set up to look at gh-pages. The owner of the repo should have access to this.
+13. Now you must go to the Github settings and make sure that the documentation link is set up to look at gh-pages. The owner of the repo should have access to this.
